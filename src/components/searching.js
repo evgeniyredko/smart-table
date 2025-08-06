@@ -1,13 +1,8 @@
-import {
-  rules,
-  createComparison,
-  skipEmptyTargetValues,
-} from "../lib/compare.js";
+import { rules, createComparison } from "../lib/compare.js";
 
 export function initSearching(searchField) {
-  // @todo: #5.1 — настроить компаратор
   const compare = createComparison(
-    [skipEmptyTargetValues],
+    ["skipEmptyTargetValues"],
     [
       rules.searchMultipleFields(
         searchField,
@@ -18,7 +13,6 @@ export function initSearching(searchField) {
   );
 
   return (data, state, action) => {
-    // @todo: #5.2 — применить компаратор
     return data.filter((row) => compare(row, state));
   };
 }
