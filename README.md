@@ -39,13 +39,13 @@
 git clone https://github.com/evgeniyredko/smart-table.git
 ```
 
-Установить все зависимости:
+2. Установить все зависимости:
 
 ```bash
 npm i
 ```
 
-Теперь можно запустить приложение:
+3. Запустить приложение:
 
 ```bash
 npm run dev
